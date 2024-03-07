@@ -1,5 +1,6 @@
 - hosts: webservers
   become: True
+  gather_facts: yes
   taska:
     - name: install git
        apt: 
