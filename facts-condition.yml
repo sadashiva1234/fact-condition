@@ -1,0 +1,8 @@
+- hosts: webservers
+  become: True
+  taska:
+    - name: install git
+       apt: 
+        name: git
+        state: present
+      when: ansible_os_family=="ubuntu"
